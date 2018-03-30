@@ -11,7 +11,9 @@ Install
 
 (2) type in: git clone git@github.com:fanlai0990/UMMonitor.git
 
-(3) type in: python pre_install.py
+(3) type in: cd UMMonitor
+
+(4) type in: python pre_install.py
 
 Then it will automatically download the dependency for you. Please note that you only need install all the dependency once.
 
