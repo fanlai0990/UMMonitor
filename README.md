@@ -9,19 +9,19 @@ Install
 =====================
 (1) open cmd
 
-(2) type: git clone git@github.com:fanlai0990/UMMonitor.git
+(2) type in: git clone git@github.com:fanlai0990/UMMonitor.git
 
-(3) type: python pre_install.py
+(3) type in: python pre_install.py
 
-Then it will automatically download the dependency for you.
+Then it will automatically download the dependency for you. Please note that you only need install all the dependency once.
 
 Start Searching
 =====================
 
 (1) open cmd
 
-(2) type: cd PATH
+(2) type in: cd PATH
 
-(3) type: python HousingMonitor.py
+(3) type in: python HousingMonitor.py
 
 PS: please note that the current codes use my email as the sender, but this will be stale soon. Instead, you should use your own email to replace the current one. i.e., line 40 in HousingMonitor.py and the corresponding validation codes (line 41).
