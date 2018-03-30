@@ -13,7 +13,8 @@ Install
 
 Then it will automatically download the dependency for you.
 
-3. Run the codes:
+Start Searching
+=====================
 
 (1) open cmd
 
