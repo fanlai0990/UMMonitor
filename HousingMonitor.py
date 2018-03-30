@@ -16,6 +16,7 @@ from email.mime.text import MIMEText
 from email.utils import formataddr
 import smtplib
 import getpass
+from random import randint
 
 LOGIN_PAGE_URL = 'https://weblogin.umich.edu/'
 LOGIN_POST_URL = 'https://weblogin.umich.edu/cosign-bin/cosign.cgi'
@@ -180,11 +181,11 @@ def main():
 
                 send_sms('NORTHWOOD!!!!!!!' + '\n'.join(simple_info))
 
-                print('Sleeping 30 seconds...')
-                time.sleep(30)
+                print('Sleeping certain seconds...')
+                time.sleep(randint(3, 20))
             else:
-                print('Sleeping 30 seconds...')
-                time.sleep(30)
+                print('Sleeping certain seconds...')
+                time.sleep(randint(3, 20))
     else:
         print('Please check your uniqname and password.')
 
