@@ -125,7 +125,6 @@ def login(username, password):
         'password': password
     }
 
-    print username, password
     # Get cookie
     print('Get cookie')
     result = session_requests.get(LOGIN_PAGE_URL)
