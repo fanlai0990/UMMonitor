@@ -21,7 +21,7 @@ from random import randint
 LOGIN_PAGE_URL = 'https://weblogin.umich.edu/'
 LOGIN_POST_URL = 'https://weblogin.umich.edu/cosign-bin/cosign.cgi'
 HOUSING_PAGE_URL = 'https://studentweb.housing.umich.edu'
-APARTMENT_SELECTION_PAGE_URL = 'https://studentweb.housing.umich.edu/SelectRoom.asp?Function=6164'
+APARTMENT_SELECTION_PAGE_URL = 'https://studentweb.housing.umich.edu/SelectRoom.asp?Function=6952'
 SEARCH_ROOM_URL = 'https://studentweb.housing.umich.edu/SelectRoomResults.asp'
 
 HOUSING_PATE_SECTION_TEXT = 'Graduate and Family Residences 2018-2019'
@@ -73,13 +73,15 @@ def extract_info_from_html_elems(elems):
 
 def search():
     payload = {
-        'fld24526': 49,  # Ready to process: {49(Yes)}
-        'fld24527': '',  # Furnishings: {Furnished, Unfurnished}
-        'fld24524': 'August 16',  # Contract start date: {July 1, July 16, August 1, August 16, September 1, September 16}
-        'dateflddtArrival': '8/15/2018',  # Arrival date: %-m/%-d/%Y (e.g., 8/15/2017)
+        #'fld24526': 49,  # Ready to process: {49(Yes)}
+        'fld28053': 'Unfurnished',  # Furnishings: {Furnished, Unfurnished}
+        'fld28051': 'August 1',  # Contract start date: {July 1, July 16, August 1, August 16, September 1, September 16}
+        'dateflddtArrival': '8/1/2018',  # Arrival date: %-m/%-d/%Y (e.g., 8/15/2017)
         'dateValueflddtArrival': '',
-        'fldFunction': 6164,
-        'btnSubmit': 'Search'
+        'fldFunction': 6952,
+        'btnSubmit': 'Search',
+        'fld28052': 49,
+        #'chkRoommate134660':'on'
     }
 
     session_requests.get(APARTMENT_SELECTION_PAGE_URL)
@@ -143,6 +145,7 @@ def login(username, password):
     # Check login
     print ('Housing')
     result = session_requests.get(HOUSING_PAGE_URL)
+
     if result.status_code / 100 != 2:
         print('Failed')
         return False
@@ -153,7 +156,6 @@ def login(username, password):
         return False
 
     return True
-
 
 def main():
 
