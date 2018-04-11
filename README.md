@@ -19,7 +19,7 @@ Then it will automatically download the dependency for you. Please note that you
 
 Configuration
 =====================
-Please config the following part:
+Please config the following part in "HousingMonitor.py":
 
     payload = {
         'fld28053': 'Unfurnished',  # Furnishings: {Furnished, Unfurnished}
@@ -29,9 +29,9 @@ Please config the following part:
         'fldFunction': 6952,
         'btnSubmit': 'Search',
         'fld28052': 49,
-        'chkRoommate134660':'on' 
+        #'chkRoommate134660':'on' 
     }
-If you don't have a roommate, please comment line 32 - "'chkRoommate134660':'on' ". I.e., you should delete this line in the "HousingMonitor.py".
+Current version doesn't support the roommate selection.
 
 Start Searching
 =====================
