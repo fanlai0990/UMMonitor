@@ -17,6 +17,22 @@ Install
 
 Then it will automatically download the dependency for you. Please note that you only need install all the dependency once.
 
+Configuration
+=====================
+Please config the following part:
+
+    payload = {
+        'fld28053': 'Unfurnished',  # Furnishings: {Furnished, Unfurnished}
+        'fld28051': 'August 16',  # Contract start date: {July 1, July 16, August 1, August 16, September 1, September 16}
+        'dateflddtArrival': '8/1/2018',  # Arrival date: %-m/%-d/%Y (e.g., 8/15/2017)
+        'dateValueflddtArrival': '',
+        'fldFunction': 6952,
+        'btnSubmit': 'Search',
+        'fld28052': 49,
+        'chkRoommate134660':'on' 
+    }
+If you don't have a roommate, please comment line 32 - "'chkRoommate134660':'on' ". I.e., you should delete this line in the "HousingMonitor.py".
+
 Start Searching
 =====================
 
