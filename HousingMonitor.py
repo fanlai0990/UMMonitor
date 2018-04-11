@@ -167,7 +167,8 @@ def main():
     _mail_to = raw_input('Email address: ')
 
     send_sms('Automatic msg from Python - Start searching', _mail_to)
-
+    
+    cnt = 0
     if login(username, pwd):
         while True:
             departments = search()
@@ -185,8 +186,9 @@ def main():
                 print('Sleeping certain seconds...')
                 time.sleep(randint(3, 20))
             else:
-                print('Sleeping certain seconds...')
+                print('Sleeping certain seconds...' + str(cnt))
                 time.sleep(randint(3, 20))
+            cnt += 1
     else:
         print('Please check your uniqname and password.')
 
