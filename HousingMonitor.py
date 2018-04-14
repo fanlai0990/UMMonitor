@@ -181,7 +181,7 @@ def main():
                         department['Name'],
                         department['Available Space'])) for department in departments]
 
-                send_sms('NORTHWOOD!!!!!!!' + '\n'.join(simple_info))
+                send_sms('NORTHWOOD!!!!!!!' + '\n'.join(simple_info), _mail_to)
 
                 print('Sleeping certain seconds...')
                 time.sleep(randint(3, 20))
