@@ -31,7 +31,7 @@ session_requests = requests.session()
 
 def send_sms(msg, _mail_to):
     ACCOUNT_SEND = '171517787@qq.com'
-    ACCOUNT_PWD = 'iqmhplxkgjsqcabj'
+    ACCOUNT_PWD = 'gzrfjeyqvkibcbdg'
     SEND_TO = _mail_to
     
     mail = MIMEText(msg)
@@ -185,6 +185,7 @@ def main():
 
                 print('Sleeping certain seconds...')
                 time.sleep(randint(3, 20))
+                return 0
             else:
                 print('Sleeping certain seconds...' + str(cnt))
                 time.sleep(randint(3, 20))
